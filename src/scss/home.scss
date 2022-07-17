@@ -1,3 +1,83 @@
-//====================================================================================================
 
-//====================================================================================================
+.main-block {
+   // .main-block__container
+   &__container-big {
+      position: relative;
+   }
+   &__container {
+   }
+   // .main-block__content
+   &__content {
+      position: relative;
+      z-index: 2;
+      @include adaptiveValue("padding-top", 250, 150);
+      @include adaptiveValue("padding-bottom", 200, 50);
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      text-align: center;
+   }
+   // .main-block__title
+   &__title {
+      max-width: rem(750);
+      &:not(:last-child) {@include adaptiveValue("margin-bottom", 69, 30);}
+   }
+   // .main-block__text
+   &__text {
+      line-height: 180%;
+      max-width: rem(580);
+      &:not(:last-child) {@include adaptiveValue("margin-bottom", 48, 20);}
+   }
+   // .main-block__form
+   &__form {
+      max-width: 533px;
+      @media (max-width: em(430)){
+           width: 100%;
+      }
+   }
+   // .main-block__icons
+   &__icons {
+   }
+}
+.icons-main-block {
+   // .icons-main-block__item
+   &__item {
+      position: absolute;
+      // .icons-main-block__item_1
+      &_1 {
+         top: percent(682,974);
+         left: rem(15);
+      }
+      // .icons-main-block__item_2
+      &_2 {
+         top: percent(379,974);
+         left: percent(273,1620);
+      }
+      // .icons-main-block__item_3
+      &_3 {
+         top: percent(757,974);
+         left: percent(403,1620);
+      }
+      // .icons-main-block__item_4
+      &_4 {
+         top: percent(157,974);
+         left: percent(1149,1620);
+      }
+      // .icons-main-block__item_5
+      &_5 {
+         top: percent(419,974);
+         left: percent(1325,1620);
+      }
+      // .icons-main-block__item_6
+      &_6 {
+         top: percent(776,974);
+         left: percent(1322,1620);
+      }
+      // .icons-main-block__item_7
+      &_7 {
+         top: percent(335,974);
+         right: rem(15);
+      }
+   }
+}
