@@ -4,7 +4,66 @@
    @include adaptiveValue("font-size", 70, 45);
    line-height: math.div( 65, 70);
    color: #FFFFFF;
+   &_64{
+      @include adaptiveValue("font-size", 64, 35);
+   }
    span{
       color: $greenColor;
+   }
+}
+//========================================================================================================================================================
+.text{
+   line-height: 180%;
+}
+//========================================================================================================================================================
+.image-block {
+   align-self: start;
+   display: flex;
+   background: rgba(255, 255, 255, 0.05);
+   border-radius: 20px;
+   @include adaptiveValue("padding-top", 166, 30);
+   @include adaptiveValue("padding-bottom", 166, 30);
+   @include adaptiveValue("padding-left", 45, 30);
+   @include adaptiveValue("padding-right", 45, 30);
+   position: relative;
+   overflow: hidden;
+		&__circle {
+         position: absolute;
+         top: 0;
+         right: 0;
+         @include adaptiveValue("width", 585, 350);
+            @include adaptiveValue("height", 585, 350);
+         &::before{
+            content:'';
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+         }
+			// .image-block__circle_1
+			&_1 {
+            &::before{
+               transform: translate(calc(50% - rem(20)),-20%);
+            }
+			}
+			// .image-block__circle_2
+			&_2 {
+            &::before{
+               transform: translate(calc(50% - rem(20)),-6%);
+            }
+			}
+		}
+   &__item {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      flex: 1 1 auto;
+      img{
+         max-width: 100%;
+         border-radius: rem(20); 
+      }
    }
 }
